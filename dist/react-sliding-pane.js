@@ -107,7 +107,8 @@ function ReactSlidingPane(_ref) {
         overlayClassName = _ref.overlayClassName,
         _ref$from = _ref.from,
         from = _ref$from === undefined ? 'right' : _ref$from,
-        width = _ref.width;
+        width = _ref.width,
+        onClose = _ref.onClose;
 
     var directionClass = 'slide-pane_from_' + from;
 
@@ -129,7 +130,7 @@ function ReactSlidingPane(_ref) {
             { className: 'slide-pane__header' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'slide-pane__close', onClick: onRequestClose },
+                { className: 'slide-pane__close', onClick: onClose },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'svg',
                     { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 13 22' },
@@ -169,7 +170,8 @@ ReactSlidingPane.propTypes = {
     className: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
     overlayClassName: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
     from: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.oneOf(['left', 'right']),
-    width: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string
+    width: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    onClose: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func
 };
 
 /***/ }),
